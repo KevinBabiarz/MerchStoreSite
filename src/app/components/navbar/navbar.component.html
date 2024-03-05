@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <div id="leftContainer" routerLink="/panel">
+      <div id="logo">
+      <img src="assets/img/PB-removebg-preview.png" alt="logo" >
+        </div>
+      <p>PoloStore</p>
+    </div>
+    <div id="rightContainer" *ngIf="getLogin()">
+      <p>Welcome {{connectedUser?.email}}</p>
+      <p (click)="logout()" id="logout">Disconnect</p>
+    </div>
+  </nav>
+  <a routerLink="" *ngIf="!connectedUser">Login</a>
+</header>
